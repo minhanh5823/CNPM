@@ -134,8 +134,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-image: url(../images/) */
-    background-image: url(../images/khach2.png);
+    background-image: url(../images/background.jpg);
     background-repeat: no-repeat;   
     background-position: center center;
     background-size: cover;
@@ -156,18 +155,15 @@ a{
     color: #fff;
     background-color: #8261ee;
 }
-.section-one .inner-wrap h1 {
+.section-one .inner-wrap h2 {
     font-weight: 500;
-   
-    font-size: 36px;
+    font-size: 34px;
     line-height: 54px;
     letter-spacing: 1.4px;
     margin-bottom: 30px;
-    color: #fff;
 }
 .section-one .inner-wrap p {
     font-size: 15px;
-    color: #fff;
     line-height: 28px;
     font-weight: 400;
     letter-spacing: 0.25px;
@@ -307,7 +303,7 @@ a{
     position: absolute;
     width: 140%;
     height: 140%;
-    background-image: url(../images/work-process-bg.png);
+    background-image: url(../images/work-process-bg.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -349,7 +345,14 @@ a{
     margin-bottom: 30px;
     position: relative;
     text-align: center;
-    transition: all 0.3s ease 0s;
+    
+
+}
+.section-four .inner-four .mini-item:hover{
+    transition: all 0.6s;
+    cursor: pointer;
+    transform: scale(1.1);
+
 }
 .section-four .inner-four .mini-item::before {
     content: "";
@@ -450,6 +453,7 @@ a{
     margin-left: 25px;
     float: left;
 }
+
 .section-five .item-content .info {
     margin-left: 20px;
     float: left;
@@ -583,6 +587,59 @@ a{
     color: #fff;
     background-color: #ff589e;
 }
+
+
+.parent-form{
+    width: 100%;
+    display: none;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9990;    
+    background-color: rgba(0,0,0,0.6);
+}
+
+.formdk{
+    background-color: #DEA7D4;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5%;
+    width: 550px;
+    height: 550px;
+}
+.formdk h2{
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.formdk #button-send{
+    color:purple;
+    margin-left: 220px;
+    font-size: 20px;
+    padding: auto;
+    background-color: pink;
+    font-weight: 700;
+    border-radius: 25px;
+}
+.formdk #button-close{
+    color:purple;
+    margin-left: 5px;
+    font-size: 20px;
+    padding: auto;
+    background-color: pink;
+    font-weight: 700;
+    border-radius: 25px;
+}
+.formdk textarea {
+    margin-left: 20px;
+    border-radius: 15px;
+}
+
 
 @media (max-width : 991.98px) {
     .count-section {
@@ -834,3 +891,173 @@ a{
     font-size: 13px;
     color: #fff;
 }
+
+
+/* call */
+.fone {
+    font-size: 19px; /* chữ cạnh nút gọi */
+    color: #9B74E7;
+    line-height: 40px;
+    font-weight: bold;
+    padding-left: 48px; /* cách bên trái cho chữ */
+    margin: 0 0;
+    }
+    .fix_tel { position:fixed; bottom:15px; left:18px; z-index:999;} /* left 18px là cách bên trái 18px. nếu muốn cho nút gọi sang phải thay là right */
+    .fix_tel a {text-decoration: none; display:block;}
+    .tel { background: #eee;width:205px; height:40px; position:relative; overflow:hidden;background-size:40px;border-radius:28px;border:none}
+    .ring-alo-phone {
+    background-color: transparent;
+    cursor: pointer;
+    height: 80px;
+    position: absolute;
+    transition: visibility 0.5s ease 0s;
+    visibility: hidden;
+    width: 80px;
+    z-index: 200000 !important;
+    }
+    .ring-alo-phone.ring-alo-show {
+    visibility: visible;
+    }
+    .ring-alo-phone.ring-alo-hover, .ring-alo-phone:hover {
+    opacity: 1;
+    }
+    .ring-alo-ph-circle {
+    animation: 1.2s ease-in-out 0s normal none infinite running ring-alo-circle-anim;
+    background-color: transparent;
+    border: 2px solid rgba(30, 30, 30, 0.4);
+    border-radius: 100%;
+    height: 70px;
+    left: 10px;
+    opacity: 0.1;
+    position: absolute;
+    top: 12px;
+    transform-origin: 50% 50% 0;
+    transition: all 0.5s ease 0s;
+    width: 70px;
+    }
+    .ring-alo-phone.ring-alo-active .ring-alo-ph-circle {
+    animation: 1.1s ease-in-out 0s normal none infinite running ring-alo-circle-anim !important;
+    }
+    .ring-alo-phone.ring-alo-static .ring-alo-ph-circle {
+    animation: 2.2s ease-in-out 0s normal none infinite running ring-alo-circle-anim !important;
+    }
+    .ring-alo-phone.ring-alo-hover .ring-alo-ph-circle, .ring-alo-phone:hover .ring-alo-ph-circle {
+    border-color: #009900;
+    opacity: 0.5;
+    }
+    .ring-alo-phone.ring-alo-green.ring-alo-hover .ring-alo-ph-circle, .ring-alo-phone.ring-alo-green:hover .ring-alo-ph-circle {
+    border-color: #baf5a7;
+    opacity: 0.5;
+    }
+    .ring-alo-phone.ring-alo-green .ring-alo-ph-circle {
+    border-color: #009900;
+    opacity: 0.5;
+    }
+    .ring-alo-ph-circle-fill {
+    animation: 2.3s ease-in-out 0s normal none infinite running ring-alo-circle-fill-anim;
+    background-color: #000;
+    border: 2px solid transparent;
+    border-radius: 100%;
+    height: 30px;
+    left: 30px;
+    opacity: 0.1;
+    position: absolute;
+    top: 33px;
+    transform-origin: 50% 50% 0;
+    transition: all 0.5s ease 0s;
+    width: 30px;
+    }
+    .ring-alo-phone.ring-alo-hover .ring-alo-ph-circle-fill, .ring-alo-phone:hover .ring-alo-ph-circle-fill {
+    background-color: rgba(0, 175, 242, 0.5);
+    opacity: 0.75 !important;
+    }
+    .ring-alo-phone.ring-alo-green.ring-alo-hover .ring-alo-ph-circle-fill, .ring-alo-phone.ring-alo-green:hover .ring-alo-ph-circle-fill {
+    background-color: rgba(117, 235, 80, 0.5);
+    opacity: 0.75 !important;
+    }
+    .ring-alo-phone.ring-alo-green .ring-alo-ph-circle-fill {
+    background-color: rgba(0, 175, 242, 0.5);
+    opacity: 0.75 !important;
+    }
+    
+    .ring-alo-ph-img-circle {
+    animation: 1s ease-in-out 0s normal none infinite running ring-alo-circle-img-anim;
+    border: 2px solid transparent;
+    border-radius: 100%;
+    height: 30px;
+    left: 30px;
+    opacity: 1;
+    position: absolute;
+    top: 33px;
+    transform-origin: 50% 50% 0;
+    width: 30px;
+    }
+    
+    .ring-alo-phone.ring-alo-hover .ring-alo-ph-img-circle, .ring-alo-phone:hover .ring-alo-ph-img-circle {
+    background-color: #009900;
+    }
+    .ring-alo-phone.ring-alo-green.ring-alo-hover .ring-alo-ph-img-circle, .ring-alo-phone.ring-alo-green:hover .ring-alo-ph-img-circle {
+    background-color: #75eb50;
+    }
+    .ring-alo-phone.ring-alo-green .ring-alo-ph-img-circle {
+    background-color: #009900;
+    }
+    @keyframes ring-alo-circle-anim {
+    0% {
+    opacity: 0.1;
+    transform: rotate(0deg) scale(0.5) skew(1deg);
+    }
+    30% {
+    opacity: 0.5;
+    transform: rotate(0deg) scale(0.7) skew(1deg);
+    }
+    100% {
+    opacity: 0.6;
+    transform: rotate(0deg) scale(1) skew(1deg);
+    }
+    }
+    
+    @keyframes ring-alo-circle-img-anim {
+    0% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    }
+    10% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+    20% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+    }
+    30% {
+    transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+    40% {
+    transform: rotate(25deg) scale(1) skew(1deg);
+    }
+    50% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    }
+    100% {
+    transform: rotate(0deg) scale(1) skew(1deg);
+    }
+    }
+    @keyframes ring-alo-circle-fill-anim {
+    0% {
+    opacity: 0.2;
+    transform: rotate(0deg) scale(0.7) skew(1deg);
+    }
+    50% {
+    opacity: 0.2;
+    transform: rotate(0deg) scale(1) skew(1deg);
+    }
+    100% {
+    opacity: 0.2;
+    transform: rotate(0deg) scale(0.7) skew(1deg);
+    }
+    }
+    .ring-alo-ph-img-circle a img {
+    padding: 1px 0 12px 1px;
+    width: 30px;
+    position: relative;
+    top: -1px;
+    }
+    
